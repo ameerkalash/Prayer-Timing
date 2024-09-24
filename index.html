@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="java Script/axios.min.js"></script>
+    <title>PRAYER TIMING</title>
+</head>
+
+<body dir="rtl">
+    <div class="container">
+        <div class="header">
+            <div class="content">
+                <div class="name">
+                    <h1 id="topTitle">مواقيت الصلاة في سوريا</h1>
+                </div>
+                <div class="darken">
+                    <div onclick='a(this.id)' id="11" class="dark toggle">
+                        <div id="kabs11" class="kabs1 kabs">D</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="date">
+            <div class="miladi mih">
+                <h4>التاريخ الميلادي :</h4>
+                <h2 id="miladiDate"></h2>
+            </div>
+            <div class="hijri mih">
+                <h4>التاريخ الهجري :</h4>
+                <h2 id="hijriDate"></h2>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="day">
+                <h3 id="day">اليوم : </h3>
+            </div>
+            <div class="parent">
+                <div onclick="choose(this)" id="6" class="choose">
+                    <h3>اختر المدينة</h3>
+                </div>
+                <ul id="ul">
+                    <li id="city" onclick="selectCity('Damascus',this)">دمشق</li>
+                    <li id="city" onclick="selectCity('Aleppo',this)">حلب</li>
+                    <li id="city" onclick="selectCity('Homs',this)">حمص</li>
+                    <li id="city" onclick="selectCity('al-hasakah',this)">الحسكة</li>
+                    <li id="city" onclick="selectCity('latakia',this)">اللاذقية</li>
+                    <li id="city" onclick="selectCity('tartus',this)">طرطوس</li>
+                    <li id="city" onclick="selectCity('idlib',this)">ادلب</li>
+                    <li id="city" onclick="selectCity('Deir ez-Zor',this)">ديرالزور</li>
+                    <li id="city" onclick="selectCity('As-Suwayda',this)">السويداء</li>
+                    <li id="city" onclick="selectCity('Daraa',this)">درعا</li>
+                    <li id="city" onclick="selectCity('hama',this)">حماة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contentt">
+            <div class="right">
+                <div id="right" class="box">
+                    مواقيت الصلاة في ....
+                </div>
+            </div>
+            <div class="left">
+                <div class="box">
+                    <div class="text">
+                        مواقيت الصلاة حسب موقعك
+                    </div>
+                    <button id="adress">تحديد الموقع</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="boxs">
+            <div class="box">
+                <h5>الفجر</h5>
+                <p id="0">00:00</p>
+            </div>
+            <div class="box">
+                <h5>الشروق</h5>
+                <p id="1">00:00</p>
+            </div>
+            <div class="box">
+                <h5>الظهر</h5>
+                <p id="2">00:00</p>
+            </div>
+            <div class="box">
+                <h5>العصر</h5>
+                <p id="3">00:00</p>
+            </div>
+            <div class="box">
+                <h5>المغرب</h5>
+                <p id="4">00:00</p>
+            </div>
+            <div class="box">
+                <h5>العشاء</h5>
+                <p id="5">00:00</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="java Script/main.js"></script>
+</body>
+
+</html>
