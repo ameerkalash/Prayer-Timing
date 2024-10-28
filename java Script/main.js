@@ -49,7 +49,7 @@ let selectCity = (li, cityName) => {
   for (let i = 0; i < 6; i++) {
     document.getElementById(i).innerHTML = "انتظر قليلا...";
   }
-  const url = `http://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${li}&country=Syria&method=1`;
+  const url = `https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${li}&country=Syria&method=1`;
   axios
     .get(url)
     .then((response) => {
@@ -76,7 +76,7 @@ document.getElementById("adress").addEventListener("click", () => {
       resolve({ country: response.data.country, city: response.data.city });
     });
   }).then(({ country, city }) => {
-    const url = `http://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=${country}&method=1`;
+    const url = `https://api.aladhan.com/v1/calendarByCity/${year}/${month}?city=${city}&country=${country}&method=1`;
     axios
       .get(url)
       .then((response) => {
